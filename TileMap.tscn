@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://x7133ul44ju1"]
+[gd_scene load_steps=6 format=3 uid="uid://x7133ul44ju1"]
 
 [ext_resource type="Texture2D" uid="uid://cv7bxy7axubft" path="res://assets/kenney_abstract-platformer/Tilesheet/tilesheet_complete.png" id="1_lo0bk"]
+[ext_resource type="PackedScene" uid="uid://br0ipxxppa6ob" path="res://CPUParticles2D.tscn" id="2_xydke"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7b7h3"]
 texture = ExtResource("1_lo0bk")
@@ -269,9 +270,14 @@ texture_region_size = Vector2i(64, 64)
 21:11/0 = 0
 11:0/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5qc3x"]
+resource_name = "my_particles"
+scenes/1/scene = ExtResource("2_xydke")
+
 [sub_resource type="TileSet" id="TileSet_87shg"]
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_7b7h3")
+sources/1 = SubResource("TileSetScenesCollectionSource_5qc3x")
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource("TileSet_87shg")
