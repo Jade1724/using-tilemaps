@@ -1,7 +1,10 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://dr62niwps0ktw"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://dr62niwps0ktw"]
 
 [ext_resource type="Texture2D" uid="uid://cv7bxy7axubft" path="res://assets/kenney_abstract-platformer/Tilesheet/tilesheet_complete.png" id="1_8obpw"]
 [ext_resource type="PackedScene" uid="uid://br0ipxxppa6ob" path="res://CPUParticles2D.tscn" id="2_w3mrv"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_cfpfo"]
+tile_data = PackedInt32Array(65536, 851968, 2, 1, 983040, 2, 65537, 917504, 2)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b6p1h"]
 polygon = PackedVector2Array(32, -32, -32, 32, 32, 32)
@@ -151,6 +154,8 @@ texture_region_size = Vector2i(64, 64)
 6:4/0 = 0
 7:4/0 = 0
 8:4/0 = 0
+8:4/0/terrain_set = 2
+8:4/0/terrain = 1
 9:4/0 = 0
 10:4/0 = 0
 11:4/0 = 0
@@ -478,3 +483,4 @@ terrain_set_2/terrain_1/name = "Terrain 1"
 terrain_set_2/terrain_1/color = Color(0.670588, 0.337255, 0.0901961, 1)
 sources/0 = SubResource("TileSetAtlasSource_7b7h3")
 sources/1 = SubResource("TileSetScenesCollectionSource_5qc3x")
+pattern_0 = SubResource("TileMapPattern_cfpfo")
